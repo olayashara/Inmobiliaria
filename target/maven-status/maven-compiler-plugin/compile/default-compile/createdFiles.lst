@@ -1,0 +1,4 @@
+com\example\models\Cliente.class
+com\example\TestConnection.class
+com\example\servlets\RegistroServlet.class
+com\example\daos\ClienteDAO.class
