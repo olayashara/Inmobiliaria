@@ -51,7 +51,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.html">
-								<img src="assets/img/sassari.png" alt="">
+								<img src="assets/img/sassarilogo.png" alt="">
 							</a>
 						</div>
 						<!-- logo -->
