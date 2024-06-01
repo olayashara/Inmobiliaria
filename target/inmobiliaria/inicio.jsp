@@ -61,7 +61,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.jsp">
-								<img src="assets/img/logo.png" alt="">
+								<img src="assets/img/sassari.jpg" alt="">
 							</a>
 						</div>
 						<!-- logo -->
@@ -71,7 +71,7 @@
 							<ul>
 								<li class="current-list-item"><a href="#">Home</a>
 									<ul class="sub-menu">
-										<li><a href="index.jsp">Static Home</a></li>
+										<li><a href="redireccion.jsp">Redireccionar</a></li>
 
 									</ul>
 								</li>
@@ -218,15 +218,6 @@
 				</div>
 			</div>
 	<!-- end products -->
-
-	<!-- logo carousel -->
-	<!-- end logo carousel -->
-
-	<!-- footer -->
-	<!-- end footer -->
-	
-	<!-- copyright -->
-	<!-- end copyright -->
 	
 	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
