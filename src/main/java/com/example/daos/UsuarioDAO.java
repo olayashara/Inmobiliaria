@@ -8,15 +8,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.models.Cliente;
+import com.example.models.Usuario;
 
-public class ClienteDAO {
+public class UsuarioDAO {
     private String URL_DB = "jdbc:mariadb://localhost:3306/inmobiliaria";
     private String USER_DB = "root";
     private String PASSWORD_DB = "root";
-    private static final String insertar_usuario = "insert into cliente (nombre, apellido, identificacion) values (?,?,?)";
-    private static final String seleccionar_todos = "select * from cliente";
-    private static final String seleccionar_por_identificacion = "select * from cliente where identificacion=?";
+    private static final String insertar_usuario = "insert into usuario (nombre, apellido, identificacion) values (?,?,?)";
+    private static final String seleccionar_todos = "select * from usuario";
+    private static final String seleccionar_por_identificacion = "select * from usuario where identificacion=?";
     private static final String eliminar_usuario = "DELETE FROM usuarios WHERE cedula = ?";
 
     protected Connection conectarBase() {
@@ -39,12 +39,12 @@ public class ClienteDAO {
         return conexion;
     }
 
-    public void insertarUsuario(Cliente nuevocliente) {
+    public void insertarUsuario(Usuario nuevousuario) {
         try (Connection conexion = conectarBase(); PreparedStatement PS = conexion.prepareStatement(insertar_usuario)) {
-            PS.setString(1, nuevocliente.getNombre());
-            PS.setString(2, nuevocliente.getApellido());
-            PS.setInt(3, nuevocliente.getIdentificacion());
-            PS.setString(1, nuevocliente.getContraseña());
+            PS.setString(1, nuevousuario.getNombre());
+            PS.setString(2, nuevousuario.getApellido());
+            PS.setInt(3, nuevousuario.getIdentificacion());
+            PS.setString(1, nuevousuario.getContraseña());
             PS.executeUpdate();
         } catch (SQLException e)
 
@@ -55,15 +55,15 @@ public class ClienteDAO {
 
     }
 
-    public Cliente seleccionarUsuario(int identificacion) {
-        Cliente cliente = new Cliente();
+    public Usuario seleccionarUsuario(int identificacion) {
+        Usuario usuario = new Usuario();
         try (Connection conexion = conectarBase(); PreparedStatement PS = conexion.prepareStatement(seleccionar_por_identificacion)) {
             PS.setInt(1, identificacion);
             ResultSet RS = PS.executeQuery();
             if (RS.next()){
-                cliente.setNombre(RS.getString("nombre"));
-                cliente.setApellido(RS.getString("apellido"));
-                cliente.setIdentificacion(RS.getInt("identificacion"));
+                usuario.setNombre(RS.getString("nombre"));
+                usuario.setApellido(RS.getString("apellido"));
+                usuario.setIdentificacion(RS.getInt("identificacion"));
             }
         } catch (SQLException e)
 
@@ -71,25 +71,25 @@ public class ClienteDAO {
             System.out.println("Si este método falla, no se pudo seleccionar el usuario" + e.getMessage());
             // TODO: handle exception
         }
-        return cliente;
+        return usuario;
     }
   
-    public List<Cliente> seleccionarTodosUsuarios() {
-        List<Cliente> clientes = new ArrayList<>();
+    public List<Usuario> seleccionarTodosUsuarios() {
+        List<Usuario> usuarios = new ArrayList<>();
         try (Connection conexion = conectarBase();
                 PreparedStatement PS = conexion.prepareStatement(seleccionar_todos)) {
             ResultSet RS = PS.executeQuery();
             while (RS.next()) {
-                Cliente cliente = new Cliente();
-                cliente.setNombre(RS.getString("nombre"));
-                cliente.setApellido(RS.getString("apellido"));
-                cliente.setIdentificacion(RS.getInt("identificacion"));
-                clientes.add(cliente);
+                Usuario usuario = new Usuario();
+                usuario.setNombre(RS.getString("nombre"));
+                usuario.setApellido(RS.getString("apellido"));
+                usuario.setIdentificacion(RS.getInt("identificacion"));
+                usuarios.add(usuario);
             }
         } catch (SQLException e) {
             System.out.println("Error al seleccionar todos los usuarios: " + e.getMessage());
         }
-        return clientes;
+        return usuarios;
     }
     public void eliminarUsuarioPorCedula(int cedula) {
         try (Connection conexion = conectarBase();

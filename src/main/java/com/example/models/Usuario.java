@@ -1,21 +1,21 @@
 package com.example.models;
 
-public class Cliente {
+public class Usuario {
     private String nombre;
     private String apellido;
     private int identificacion;
     private String contraseña;
 
-    public Cliente() {
+    public Usuario() {
     }
 
-    public Cliente(String nombre, String apellido, String contraseña) {
+    public Usuario(String nombre, String apellido, String contraseña) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.contraseña = contraseña;
     }
 
-    public Cliente(String nombre, String apellido, int identificacion, String contraseña) {
+    public Usuario(String nombre, String apellido, int identificacion, String contraseña) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.identificacion = identificacion;
