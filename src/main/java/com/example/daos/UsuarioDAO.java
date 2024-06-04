@@ -14,7 +14,7 @@ public class UsuarioDAO {
     private String URL_DB = "jdbc:mariadb://localhost:3306/inmobiliaria";
     private String USER_DB = "root";
     private String PASSWORD_DB = "root";
-    private static final String insertar_usuario = "insert into usuario (nombre, apellido, identificacion) values (?,?,?)";
+    private static final String insertar_usuario = "insert into usuario (nombre, apellido, identificacion, contrasena) values (?,?,?,?)";
     private static final String seleccionar_todos = "select * from usuario";
     private static final String seleccionar_por_identificacion = "select * from usuario where identificacion=?";
     private static final String eliminar_usuario = "DELETE FROM usuarios WHERE cedula = ?";
@@ -26,7 +26,7 @@ public class UsuarioDAO {
             // de datos MariaDB
             Class.forName("org.mariadb.jdbc.Driver");
             System.out.println("Conectando a la base de datos...");
-            // Le pasamos la URL de la base de datos, el usuario y la contraseña para
+            // Le pasamos la URL de la base de datos, el usuario y la contrasena para
             // conectarnos a la base de datos
             conexion = DriverManager.getConnection(URL_DB, USER_DB, PASSWORD_DB);
             System.out.println(conexion);
@@ -44,7 +44,7 @@ public class UsuarioDAO {
             PS.setString(1, nuevousuario.getNombre());
             PS.setString(2, nuevousuario.getApellido());
             PS.setInt(3, nuevousuario.getIdentificacion());
-            PS.setString(1, nuevousuario.getContraseña());
+            PS.setString(4, nuevousuario.getContrasena());
             PS.executeUpdate();
         } catch (SQLException e)
 

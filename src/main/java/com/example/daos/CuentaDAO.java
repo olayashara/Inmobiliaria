@@ -70,8 +70,8 @@ public class CuentaDAO {
 
     public Cuenta seleccionarCuentaPorUsuarioId(int idUsuario) {
         Cuenta cuenta = null;
-        try (Connection connection = conectarBase();
-                PreparedStatement preparedStatement = connection.prepareStatement(SELECT_CUENTA_BY_USUARIO_ID)) {
+        try (Connection conexion = conectarBase();
+                PreparedStatement preparedStatement = conexion.prepareStatement(SELECT_CUENTA_BY_USUARIO_ID)) {
             preparedStatement.setInt(1, idUsuario);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
@@ -87,8 +87,8 @@ public class CuentaDAO {
     }
 
     public void actualizarSaldo(int idCuenta, int saldo) throws SQLException {
-        try (Connection connection = conectarBase();
-                PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_SALDO_SQL)) {
+        try (Connection conexion = conectarBase();
+                PreparedStatement preparedStatement = conexion.prepareStatement(UPDATE_SALDO_SQL)) {
             preparedStatement.setInt(1, saldo);
             preparedStatement.setInt(2, idCuenta);
             preparedStatement.executeUpdate();
@@ -98,19 +98,19 @@ public class CuentaDAO {
     }
 
     public void transferirDinero(int idCuentaOrigen, int idCuentaDestino, int monto) throws SQLException {
-        Connection connection = null;
+        Connection conexion = null;
         PreparedStatement actualizarCuentaOrigen = null;
         PreparedStatement actualizarCuentaDestino = null;
 
         try {
-            connection = conectarBase();
-            connection.setAutoCommit(false);
+            conexion = conectarBase();
+            conexion.setAutoCommit(false);
 
             // Obtener saldo de la cuenta origen
-            int saldoOrigen = obtenerSaldo(connection, idCuentaOrigen);
+            int saldoOrigen = obtenerSaldo(conexion, idCuentaOrigen);
 
             // Obtener saldo de la cuenta destino
-            int saldoDestino = obtenerSaldo(connection, idCuentaDestino);
+            int saldoDestino = obtenerSaldo(conexion, idCuentaDestino);
 
             // Verificar que haya suficiente dinero en la cuenta origen
             if (saldoOrigen < monto) {
@@ -118,8 +118,8 @@ public class CuentaDAO {
             }
 
             // Actualizar saldos
-            actualizarCuentaOrigen = connection.prepareStatement(UPDATE_SALDO_SQL);
-            actualizarCuentaDestino = connection.prepareStatement(UPDATE_SALDO_SQL);
+            actualizarCuentaOrigen = conexion.prepareStatement(UPDATE_SALDO_SQL);
+            actualizarCuentaDestino = conexion.prepareStatement(UPDATE_SALDO_SQL);
 
             actualizarCuentaOrigen.setInt(1, saldoOrigen - monto);
             actualizarCuentaOrigen.setInt(2, idCuentaOrigen);
@@ -130,11 +130,11 @@ public class CuentaDAO {
             actualizarCuentaOrigen.executeUpdate();
             actualizarCuentaDestino.executeUpdate();
 
-            connection.commit();
+            conexion.commit();
         } catch (SQLException e) {
-            if (connection != null) {
+            if (conexion != null) {
                 try {
-                    connection.rollback();
+                    conexion.rollback();
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
@@ -147,15 +147,15 @@ public class CuentaDAO {
             if (actualizarCuentaDestino != null) {
                 actualizarCuentaDestino.close();
             }
-            if (connection != null) {
-                connection.setAutoCommit(true);
-                connection.close();
+            if (conexion != null) {
+                conexion.setAutoCommit(true);
+                conexion.close();
             }
         }
     }
 
-    private int obtenerSaldo(Connection connection, int idCuenta) throws SQLException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SALDO_BY_ID)) {
+    private int obtenerSaldo(Connection conexion, int idCuenta) throws SQLException {
+        try (PreparedStatement preparedStatement = conexion.prepareStatement(SELECT_SALDO_BY_ID)) {
             preparedStatement.setInt(1, idCuenta);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs.next()) {

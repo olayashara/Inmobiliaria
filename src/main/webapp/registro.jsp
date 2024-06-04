@@ -37,7 +37,7 @@
 			padding: 0.5em 1em;
 			border: 1px solid #ccc;
 			border-radius: 0.5em;
-			box-sizing: border-box; /* Agregué esto */
+			box-sizing: border-box;
 		}
 		
 		.button {
@@ -74,7 +74,7 @@
                 <input type="text" name="apellido" placeholder="Apellido">
             </div>
 			<div>
-                <input type="password" name="contraseña" placeholder="Contrasena">
+                <input type="password" name="contrasena" placeholder="Contrasena">
             </div>
             <div>
                 <input type="number" name="identificacion" placeholder="Identificacion">

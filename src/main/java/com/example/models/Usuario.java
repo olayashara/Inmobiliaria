@@ -4,22 +4,22 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private int identificacion;
-    private String contraseña;
+    private String contrasena;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellido, String contraseña) {
+    public Usuario(String nombre, String apellido, String contrasena) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 
-    public Usuario(String nombre, String apellido, int identificacion, String contraseña) {
+    public Usuario(String nombre, String apellido, int identificacion, String contrasena) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.identificacion = identificacion;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 
     public String getNombre() {
@@ -46,11 +46,11 @@ public class Usuario {
         this.identificacion = identificacion;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 }

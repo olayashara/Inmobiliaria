@@ -1,4 +1,6 @@
-com\example\models\Cliente.class
+com\example\daos\CuentaDAO.class
 com\example\TestConnection.class
+com\example\models\Cuenta.class
+com\example\models\Usuario.class
 com\example\servlets\RegistroServlet.class
-com\example\daos\ClienteDAO.class
+com\example\daos\UsuarioDAO.class
