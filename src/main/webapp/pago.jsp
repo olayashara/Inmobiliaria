@@ -64,6 +64,7 @@
 	</style>
 </head>
 <body>
+
     <div class="container">
         <h1>Realiza tu Pago</h1>
         <form action="compra" method="post">
@@ -77,7 +78,7 @@
                 <input type="password" name="contrasena" placeholder="Contrasena">
             </div>
             <div>
-                <input type="text" name="referencia" placeholder="RH1">
+                <input type="text" name="referencia" placeholder="Referencia: RH1">
             </div>
             <div>
                 <input type="number" name="identificacion" placeholder="Identificacion">

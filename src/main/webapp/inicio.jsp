@@ -163,7 +163,7 @@
 						</div>
 						<h3>Residencia RH1</h3>
 						<p class="product-price"><span>Residencia Tipo Casa</span> $1.990.000.000COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar</a>
+						<a href="compra1.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 text-center casa">
@@ -173,7 +173,7 @@
 						</div>
 						<h3>Residencia RH2</h3>
 						<p class="product-price"><span>Residencia Tipo Casa</span> $3.740.112.450COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
+						<a href="compra1.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 text-center apartamento">
@@ -183,7 +183,7 @@
 						</div>
 						<h3>Apartamento AP1</h3>
 						<p class="product-price"><span>Residencia Tipo Apartamento</span> $770.000.000COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
+						<a href="compra1.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 text-center apartamento">
@@ -193,7 +193,7 @@
 						</div>
 						<h3>Apartamento AP2</h3>
 						<p class="product-price"><span>Residencia Tipo Apartamento</span> $1.238.400.000COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
+						<a href="compra1.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 text-center terreno">
@@ -203,7 +203,7 @@
 						</div>
 						<h3>Terreno TR1</h3>
 						<p class="product-price"><span>Terreno de 10.000 m^2</span> $8.822.054.399COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
+						<a href="compra1.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 text-center terreno">
@@ -213,7 +213,7 @@
 						</div>
 						<h3>Terreno TR2</h3>
 						<p class="product-price"><span>Terreno de 40.000 m^2</span> $4.644.000.000COP</p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
+						<a href="compra1.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
 					</div>
 				</div>
 			</div>

@@ -4,12 +4,13 @@ import java.io.Serializable;
 
 public class Cuenta implements Serializable {
     private static final long serialVersionUID = 1L;
-    
+
     private int idCuenta;
     private int idUsuario;
     private int saldo;
 
-    public Cuenta() {}
+    public Cuenta() {
+    }
 
     public Cuenta(int idUsuario, int saldo) {
         this.idUsuario = idUsuario;

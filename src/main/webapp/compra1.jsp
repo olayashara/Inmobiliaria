@@ -145,7 +145,7 @@
 						<h3>Precio:</h3>
 						<div class="single-product-form">
 							<h3>$1.990.000.000COP</h3>
-							<a href="oferta.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Pago</a>
+							<a href="pago.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Pago</a>
 							<p><strong>Categorias: </strong>Residencia, Lujo, Casa</p>
 						</div>
 						<h4>Share:</h4>
