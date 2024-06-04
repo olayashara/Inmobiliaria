@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Inmobiliaria</title>
+	<title>Subasta</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -17,7 +17,7 @@
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="assets/css/all.min.css">
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<!-- owl carousel -->
 	<link rel="stylesheet" href="assets/css/owl.carousel.css">
 	<!-- magnific popup -->
@@ -31,16 +31,6 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
-	<style>
-        .single-product-item {
-            text-align: center;
-        }
-
-        .single-product-item h2 {
-            text-align: center;
-        }
-    </style>
-	
 </head>
 <body>
 	
@@ -81,9 +71,9 @@
 										<li><a href="registro.jsp">Registro</a></li>
 									</ul>
 								</li>
-								<li><a href="news.jsp">Inventario</a>
+								<li><a href="inventariousuarios.jsp">Inventario</a>
 									<ul class="sub-menu">
-										<li><a href="news.jsp">Inventario de Famosos</a></li>
+										<li><a href="inventariousuarios.jsp">Inventario por Usuarios</a></li>
 									</ul>
 								</li>
 								<li>
@@ -129,8 +119,8 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Tu hogar perfecto, nuestro compromiso.</p>
-						<h1>Inmobiliaria</h1>
+						<p>Compra</p>
+						<h1>Detalles del producto</h1>
 					</div>
 				</div>
 			</div>
@@ -138,87 +128,40 @@
 	</div>
 	<!-- end breadcrumb section -->
 
-	<!-- products -->
-	<div class="product-section mt-150 mb-150">
+	<!-- single product -->
+	<div class="single-product mt-150 mb-150">
 		<div class="container">
-
 			<div class="row">
-                <div class="col-md-12">
-                    <div class="product-filters">
-                        <ul>
-                            <li class="active" data-filter="*">Todos</li>
-                            <li data-filter=".casa">Casas</li>
-                            <li data-filter=".apartamento">Apartamentos</li>
-                            <li data-filter=".terreno">Terrenos</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-			<div class="row product-lists">
-				<div class="col-lg-4 col-md-6 text-center casa">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/house1.jpg" alt=""></a>
-						</div>
+				<div class="col-md-5">
+					<div class="single-product-img">
+						<img src="assets/img/products/house1.jpg" alt="">
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="single-product-content">
 						<h3>Residencia RH1</h3>
-						<p class="product-price"><span>Residencia Tipo Casa</span> $1.990.000.000COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center casa">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/house2.jpg" alt=""></a>
+						<p class="single-product-pricing"><span>REFERENCIA: RC1</span></p>
+						<p>Esta residencia es perfecta para aquellos que buscan un hogar que combine lujo, comodidad y ubicacion privilegiada. No pierda la oportunidad de hacer suya esta joya arquitectonica.</p>
+						<h3>Precio:</h3>
+						<div class="single-product-form">
+							<h3>$1.990.000.000COP</h3>
+							<a href="oferta.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Pago</a>
+							<p><strong>Categorias: </strong>Residencia, Lujo, Casa</p>
 						</div>
-						<h3>Residencia RH2</h3>
-						<p class="product-price"><span>Residencia Tipo Casa</span> $3.740.112.450COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center apartamento">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/apto1.jpg" alt=""></a>
-						</div>
-						<h3>Apartamento AP1</h3>
-						<p class="product-price"><span>Residencia Tipo Apartamento</span> $770.000.000COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center apartamento">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/apto2.jpg" alt=""></a>
-						</div>
-						<h3>Apartamento AP2</h3>
-						<p class="product-price"><span>Residencia Tipo Apartamento</span> $1.238.400.000COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center terreno">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/terreno2.png" alt=""></a>
-						</div>
-						<h3>Terreno TR1</h3>
-						<p class="product-price"><span>Terreno de 10.000 m^2</span> $8.822.054.399COP </p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center terreno">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/terreno1.jpg" alt=""></a>
-						</div>
-						<h3>Terreno TR2</h3>
-						<p class="product-price"><span>Terreno de 40.000 m^2</span> $4.644.000.000COP</p>
-						<a href="compra.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Comprar </a>
+						<h4>Share:</h4>
+						<ul class="product-share">
+							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href=""><i class="fab fa-twitter"></i></a></li>
+							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-	<!-- end products -->
-	
+		</div>
+	</div>
+	<!-- end single product -->
+
 	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->
@@ -241,4 +184,4 @@
 	<script src="assets/js/main.js"></script>
 
 </body>
-</jsp>
+</html>

@@ -147,7 +147,7 @@
 							<form action="inicio.jsp">
 								<input type="number" placeholder="0">
 							</form>
-							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Oferta</a>
+							<a href="oferta.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Oferta</a>
 							<p><strong>Categorias: </strong>Residencia, Lujo, Casa</p>
 						</div>
 						<h4>Share:</h4>
