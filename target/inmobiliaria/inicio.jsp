@@ -60,7 +60,7 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.jsp">
+							<a href="inicio.jsp">
 								<img src="assets/img/sassarilogo.png" alt="">
 							</a>
 						</div>

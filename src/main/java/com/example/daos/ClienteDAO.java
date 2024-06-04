@@ -17,6 +17,7 @@ public class ClienteDAO {
     private static final String insertar_usuario = "insert into cliente (nombre, apellido, identificacion) values (?,?,?)";
     private static final String seleccionar_todos = "select * from cliente";
     private static final String seleccionar_por_identificacion = "select * from cliente where identificacion=?";
+    private static final String eliminar_usuario = "DELETE FROM usuarios WHERE cedula = ?";
 
     protected Connection conectarBase() {
         Connection conexion = null;
@@ -43,6 +44,7 @@ public class ClienteDAO {
             PS.setString(1, nuevocliente.getNombre());
             PS.setString(2, nuevocliente.getApellido());
             PS.setInt(3, nuevocliente.getIdentificacion());
+            PS.setString(1, nuevocliente.getContraseña());
             PS.executeUpdate();
         } catch (SQLException e)
 
@@ -71,9 +73,31 @@ public class ClienteDAO {
         }
         return cliente;
     }
-    public List<Cliente> seleccionar_todos(){
-        List<Cliente> lista = new ArrayList<>();
-
-        return lista;
+  
+    public List<Cliente> seleccionarTodosUsuarios() {
+        List<Cliente> clientes = new ArrayList<>();
+        try (Connection conexion = conectarBase();
+                PreparedStatement PS = conexion.prepareStatement(seleccionar_todos)) {
+            ResultSet RS = PS.executeQuery();
+            while (RS.next()) {
+                Cliente cliente = new Cliente();
+                cliente.setNombre(RS.getString("nombre"));
+                cliente.setApellido(RS.getString("apellido"));
+                cliente.setIdentificacion(RS.getInt("identificacion"));
+                clientes.add(cliente);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al seleccionar todos los usuarios: " + e.getMessage());
+        }
+        return clientes;
     }
+    public void eliminarUsuarioPorCedula(int cedula) {
+        try (Connection conexion = conectarBase();
+            PreparedStatement PS = conexion.prepareStatement(eliminar_usuario)) {
+          PS.setInt(1, cedula);
+          PS.executeUpdate();
+        } catch (SQLException e) {
+          System.out.println("Error al eliminar un usuario por cédula: " + e.getMessage());
+        }
+      }
 }

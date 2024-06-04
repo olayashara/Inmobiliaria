@@ -1,5 +1,3 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,13 +68,16 @@
         <h1>Crea tu Cuenta</h1>
         <form action="registro" method="post">
             <div>
-                <input type="text" name="nombre" placeholder="Aqui Nombre">
+                <input type="text" name="nombre" placeholder="Nombre">
             </div>
             <div>
-                <input type="text" name="apellido" placeholder="Aqui Apellido">
+                <input type="text" name="apellido" placeholder="Apellido">
+            </div>
+			<div>
+                <input type="password" name="contraseña" placeholder="Contraseña">
             </div>
             <div>
-                <input type="number" name="identificacion" placeholder="Aqui Identificacion">
+                <input type="number" name="identificacion" placeholder="Identificacion">
             </div>
             <div class="button">
                 <button type="submit">Registrarse</button>

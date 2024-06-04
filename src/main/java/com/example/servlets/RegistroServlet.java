@@ -22,7 +22,8 @@ public class RegistroServlet extends HttpServlet{
         String nombre = hsr.getParameter("nombre");
         String apellido = hsr.getParameter("apellido");
         int identificacion = Integer.parseInt(hsr.getParameter("identificacion"));
-        Cliente Obj = new Cliente(nombre, apellido, identificacion);
+        String contraseña = hsr.getParameter("contraseña");
+        Cliente Obj = new Cliente(nombre, apellido, identificacion, contraseña);
 
         clienteD.insertarUsuario(Obj);
         hsr2.sendRedirect("redireccion.jsp");

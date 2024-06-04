@@ -50,7 +50,7 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
+							<a href="inicio.jsp">
 								<img src="assets/img/sassarilogo.png" alt="">
 							</a>
 						</div>
@@ -71,9 +71,9 @@
 										<li><a href="registro.jsp">Registro</a></li>
 									</ul>
 								</li>
-								<li><a href="news.jsp">Inventario</a>
+								<li><a href="inventariousuarios.jsp">Inventario</a>
 									<ul class="sub-menu">
-										<li><a href="news.jsp">Inventario por Usuarios</a></li>
+										<li><a href="inventariousuarios.jsp">Inventario por Usuarios</a></li>
 									</ul>
 								</li>
 								<li>
@@ -144,7 +144,7 @@
 						<p>Esta residencia es perfecta para aquellos que buscan un hogar que combine lujo, comodidad y ubicacion privilegiada. No pierda la oportunidad de hacer suya esta joya arquitectonica.</p>
 						<p>Oferta tu precio aqui:</p>
 						<div class="single-product-form">
-							<form action="index.html">
+							<form action="inicio.jsp">
 								<input type="number" placeholder="0">
 							</form>
 							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Oferta</a>
