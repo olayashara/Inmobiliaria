@@ -70,6 +70,9 @@
 									<ul class="sub-menu">
 										<li><a href="registro.jsp">Registro</a></li>
 									</ul>
+									<ul class="sub-menu">
+										<li><a href="iniciarSesion.jsp">Iniciar Sesion</a></li>
+									</ul>
 								</li>
 								<li><a href="inventariousuarios.jsp">Inventario</a>
 									<ul class="sub-menu">
@@ -144,9 +147,6 @@
 						<p>Esta residencia es perfecta para aquellos que buscan un hogar que combine lujo, comodidad y ubicacion privilegiada. No pierda la oportunidad de hacer suya esta joya arquitectonica.</p>
 						<p>Oferta tu precio aqui:</p>
 						<div class="single-product-form">
-							<form action="inicio.jsp">
-								<input type="number" placeholder="0">
-							</form>
 							<a href="oferta.jsp" class="cart-btn"><i class="fas fa-shopping-cart"></i> Realizar Oferta</a>
 							<p><strong>Categorias: </strong>Residencia, Lujo, Casa</p>
 						</div>

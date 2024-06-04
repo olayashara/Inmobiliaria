@@ -76,11 +76,16 @@
 									</ul>
 								</li>
 								<li><a href="subasta.jsp">Subasta</a></li>
+
 								<li><a href="#">Usuario</a>
 									<ul class="sub-menu">
 										<li><a href="registro.jsp">Registro</a></li>
 									</ul>
+									<ul class="sub-menu">
+										<li><a href="iniciarSesion.jsp">Iniciar Sesion</a></li>
+									</ul>
 								</li>
+								
 								<li><a href="news.jsp">Inventario</a>
 									<ul class="sub-menu">
 										<li><a href="news.jsp">Inventario de Famosos</a></li>

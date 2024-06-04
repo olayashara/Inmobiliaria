@@ -16,8 +16,9 @@ public class UsuarioDAO {
     private String PASSWORD_DB = "root";
     private static final String insertar_usuario = "insert into usuario (nombre, apellido, identificacion, contrasena) values (?,?,?,?)";
     private static final String seleccionar_todos = "select * from usuario";
-    private static final String seleccionar_por_identificacion = "select * from usuario where identificacion=?";
+    private static final String seleccionar_por_identificacion = "select * FROM usuario WHERE identificacion=? AND contrasena = ? ";
     private static final String eliminar_usuario = "DELETE FROM usuarios WHERE cedula = ?";
+private static final String insertar_oferta = "insert into ofertas (usuario, oferta) values (?,?)";
 
     protected Connection conectarBase() {
         Connection conexion = null;
@@ -55,15 +56,31 @@ public class UsuarioDAO {
 
     }
 
-    public Usuario seleccionarUsuario(int identificacion) {
+    public void insertarOferta(Usuario usuario, double oferta) {
+        try (Connection conexion = conectarBase(); PreparedStatement PS = conexion.prepareStatement(insertar_oferta)) {
+            PS.setInt(1, usuario.getConsecutivo());
+            PS.setDouble(2, oferta);
+            PS.executeUpdate();
+        } catch (SQLException e)
+
+        {
+            System.out.println("Si este método falla, no se pudo insertar la oferta" + e.getMessage());
+            // TODO: handle exception
+        }
+
+    }
+
+    public Usuario seleccionarUsuario(int identificacion, String contrasena) {
         Usuario usuario = new Usuario();
         try (Connection conexion = conectarBase(); PreparedStatement PS = conexion.prepareStatement(seleccionar_por_identificacion)) {
             PS.setInt(1, identificacion);
+            PS.setString(2, contrasena);
             ResultSet RS = PS.executeQuery();
             if (RS.next()){
                 usuario.setNombre(RS.getString("nombre"));
                 usuario.setApellido(RS.getString("apellido"));
                 usuario.setIdentificacion(RS.getInt("identificacion"));
+                usuario.setConsecutivo(RS.getInt("consecutivo"));
             }
         } catch (SQLException e)
 

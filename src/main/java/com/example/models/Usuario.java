@@ -5,8 +5,17 @@ public class Usuario {
     private String apellido;
     private int identificacion;
     private String contrasena;
+    private int consecutivo;
 
     public Usuario() {
+    }
+
+    public int getConsecutivo() {
+        return consecutivo;
+    }
+
+    public void setConsecutivo(int consecutivo) {
+        this.consecutivo = consecutivo;
     }
 
     public Usuario(String nombre, String apellido, String contrasena) {

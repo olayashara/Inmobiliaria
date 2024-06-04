@@ -4,5 +4,6 @@ com\example\models\Usuario.class
 com\example\servlets\RegistroServlet.class
 com\example\daos\CuentaDAO.class
 com\example\TestConnection.class
+com\example\servlets\IniciarSesionServlet.class
+com\example\servlets\OfertaServlet.class
 com\example\daos\UsuarioDAO.class
-com\example\servlets\ObtenerServlet.class

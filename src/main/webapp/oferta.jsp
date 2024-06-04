@@ -67,7 +67,8 @@
 	</style>
 </head>
 <body>
-    <div class="container">
+    <form action="oferta" method="post">
+        <div class="container">
         <h1>Realizar Oferta</h1>
         <div class="info">
             <p>Residencia RH1<br>REFERENCIA: RC1</p>
@@ -80,5 +81,6 @@
             <button type="submit">Enviar Oferta</button>
         </div>
     </div>
+</form>
 </body>
 </html>
