@@ -79,16 +79,14 @@
 
 								<li><a href="#">Usuario</a>
 									<ul class="sub-menu">
-										<li><a href="registro.jsp">Registro</a></li>
+									  <li><a href="registro.jsp">Registro</a></li>
+									  <li><a href="iniciarSesion.jsp">Iniciar Sesion</a></li>
 									</ul>
-									<ul class="sub-menu">
-										<li><a href="iniciarSesion.jsp">Iniciar Sesion</a></li>
-									</ul>
-								</li>
+								  </li>
 								
-								<li><a href="news.jsp">Inventario</a>
+								<li><a href="inventariousuarios.jsp">Inventario</a>
 									<ul class="sub-menu">
-										<li><a href="news.jsp">Inventario de Famosos</a></li>
+										<li><a href="inventariousuarios.jsp">Inventario de Usuarios</a></li>
 									</ul>
 								</li>
 								<li>
@@ -164,7 +162,7 @@
 				<div class="col-lg-4 col-md-6 text-center casa">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/house1.jpg" alt=""></a>
+							<a href="compra1.jsp"><img src="assets/img/products/house1.jpg" alt=""></a>
 						</div>
 						<h3>Residencia RH1</h3>
 						<p class="product-price"><span>Residencia Tipo Casa</span> $1.990.000.000COP </p>
@@ -174,7 +172,7 @@
 				<div class="col-lg-4 col-md-6 text-center casa">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/house2.jpg" alt=""></a>
+							<a href="compra1.jsp"><img src="assets/img/products/house2.jpg" alt=""></a>
 						</div>
 						<h3>Residencia RH2</h3>
 						<p class="product-price"><span>Residencia Tipo Casa</span> $3.740.112.450COP </p>
@@ -184,7 +182,7 @@
 				<div class="col-lg-4 col-md-6 text-center apartamento">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/apto1.jpg" alt=""></a>
+							<a href="compra1.jsp"><img src="assets/img/products/apto1.jpg" alt=""></a>
 						</div>
 						<h3>Apartamento AP1</h3>
 						<p class="product-price"><span>Residencia Tipo Apartamento</span> $770.000.000COP </p>
@@ -194,7 +192,7 @@
 				<div class="col-lg-4 col-md-6 text-center apartamento">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/apto2.jpg" alt=""></a>
+							<a href="compra1.jsp"><img src="assets/img/products/apto2.jpg" alt=""></a>
 						</div>
 						<h3>Apartamento AP2</h3>
 						<p class="product-price"><span>Residencia Tipo Apartamento</span> $1.238.400.000COP </p>
@@ -204,7 +202,7 @@
 				<div class="col-lg-4 col-md-6 text-center terreno">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/terreno2.png" alt=""></a>
+							<a href="compra1.jsp"><img src="assets/img/products/terreno2.png" alt=""></a>
 						</div>
 						<h3>Terreno TR1</h3>
 						<p class="product-price"><span>Terreno de 10.000 m^2</span> $8.822.054.399COP </p>
@@ -214,7 +212,7 @@
 				<div class="col-lg-4 col-md-6 text-center terreno">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.jsp"><img src="assets/img/products/terreno1.jpg" alt=""></a>
+							<a href="compra1.jsp"><img src="assets/img/products/terreno1.jpg" alt=""></a>
 						</div>
 						<h3>Terreno TR2</h3>
 						<p class="product-price"><span>Terreno de 40.000 m^2</span> $4.644.000.000COP</p>

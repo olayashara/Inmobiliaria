@@ -66,14 +66,18 @@
 									</ul>
 								</li>
 								<li><a href="subasta.jsp">Subasta</a></li>
+
 								<li><a href="#">Usuario</a>
 									<ul class="sub-menu">
-										<li><a href="registro.jsp">Registro</a></li>
+									  <li><a href="registro.jsp">Registro</a></li>
+									  <li><a href="iniciarSesion.jsp">Iniciar Sesion</a></li>
 									</ul>
-								</li>
-								<li><a href="news.jsp">Inventario</a>
+								  </li>
+								
+
+								<li><a href="inventariousuarios.jsp">Inventario</a>
 									<ul class="sub-menu">
-										<li><a href="news.jsp">Inventario por Usuarios</a></li>
+										<li><a href="inventariousuarios.jsp">Inventario por Usuarios</a></li>
 									</ul>
 								</li>
 								<li>
@@ -134,85 +138,85 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.jsp"><div class="latest-news-bg news-bg-1"></div></a>
+						<a href="detallesartista.jsp"></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.jsp">Maluma</a></h3>
+							<h3><a href="detallesartista.jsp">Feid</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
 								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
 							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">Consulta los bienes adquiridos por este artista.</p>
+							<a href="detallesartista.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.jsp"><div class="latest-news-bg news-bg-2"></div></a>
+						<a href="detallesartista.jsp"></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.jsp">Feid</a></h3>
+							<h3><a href="detallesartista.jsp">Maluma</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
 								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
 							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">Consulta los bienes adquiridos por este artista.</p>
+							<a href="detallesartista.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.jsp"><div class="latest-news-bg news-bg-3"></div></a>
+						<a href="detallesartista.jsp"></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.jsp">Billie Eilish</a></h3>
+							<h3><a href="detallesartista.jsp">Karol G</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
 								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
 							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">Consulta los bienes adquiridos por este artista.</p>
+							<a href="detallesartista.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.jsp"><div class="latest-news-bg news-bg-4"></div></a>
+						<a href="detallesartista.jsp"></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.jsp">Karol G</a></h3>
+							<h3><a href="detallesartista.jsp">Selena Quintanilla</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
 								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
 							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">Consulta los bienes adquiridos por este artista.</p>
+							<a href="detallesartista.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.jsp"><div class="latest-news-bg news-bg-5"></div></a>
+						<a href="detallesartista.jsp"></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.jsp">Doja Cat</a></h3>
+							<h3><a href="detallesartista.jsp">Dua Lipa</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
 								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
 							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">Consulta los bienes adquiridos por este artista.</p>
+							<a href="detallesartista.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.jsp"><div class="latest-news-bg news-bg-6"></div></a>
+						<a href="detallesartista.jsp"></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.jsp">Dua Lipa</a></h3>
+							<h3><a href="detallesartista.jsp">Billie Eilish</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2018</span>
+								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
 							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">Consulta los bienes adquiridos por este artista.</p>
+							<a href="detallesartista.jsp" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
