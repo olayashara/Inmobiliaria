@@ -2,6 +2,23 @@
 <html>
 <head>
 	<title>Realizar Oferta</title>
+	<body>
+		<form action="oferta" method="post">
+			<div class="container">
+			<h1>Realizar Oferta</h1>
+			<div class="info">
+				<p>Residencia RH1<br>REFERENCIA: RC1</p>
+			</div>
+			<div>
+				<label for="oferta">Oferta:</label>
+				<input type="number" id="oferta" name="oferta">
+			</div>
+			<div class="button">
+				<button type="submit">Enviar Oferta</button>
+			</div>
+		</div>
+	</form>
+	</body>
 	<style>
         body {
 			margin: 0;
@@ -66,21 +83,4 @@
 		}
 	</style>
 </head>
-<body>
-    <form action="oferta" method="post">
-        <div class="container">
-        <h1>Realizar Oferta</h1>
-        <div class="info">
-            <p>Residencia RH1<br>REFERENCIA: RC1</p>
-        </div>
-        <div>
-            <label for="oferta">Oferta:</label>
-            <input type="number" id="oferta" name="oferta">
-        </div>
-        <div class="button">
-            <button type="submit">Enviar Oferta</button>
-        </div>
-    </div>
-</form>
-</body>
 </html>

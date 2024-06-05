@@ -2,6 +2,33 @@
 <html>
 <head>
 	<title>Pago Virtual</title>
+	<body>
+		<div class="container">
+			<h1>Realiza tu Pago</h1>
+			<form action="pago" method="post">
+				<div>
+					<input type="text" name="nombre" placeholder="Nombre">
+				</div>
+				<div>
+					<input type="text" name="apellido" placeholder="Apellido">
+				</div>
+				<div>
+					<input type="password" name="contrasena" placeholder="Contrasena">
+				</div>
+				<div>
+					<input type="text" name="referencia" placeholder="Referencia: RH1">
+				</div>
+				<div>
+					<input type="number" name="identificacion" placeholder="Identificacion">
+				</div>
+				
+				<div class="button">
+					<button type="submit">Pagar</button>
+				</div>
+			</form>
+		</div>
+	</body>
+
 	<style>
         body {
 			margin: 0;
@@ -63,31 +90,5 @@
 		}
 	</style>
 </head>
-<body>
 
-    <div class="container">
-        <h1>Realiza tu Pago</h1>
-        <form action="compra" method="post">
-            <div>
-                <input type="text" name="nombre" placeholder="Nombre">
-            </div>
-            <div>
-                <input type="text" name="apellido" placeholder="Apellido">
-            </div>
-			<div>
-                <input type="password" name="contrasena" placeholder="Contrasena">
-            </div>
-            <div>
-                <input type="text" name="referencia" placeholder="Referencia: RH1">
-            </div>
-            <div>
-                <input type="number" name="identificacion" placeholder="Identificacion">
-            </div>
-            
-            <div class="button">
-                <button type="submit">Pagar</button>
-            </div>
-        </form>
-    </div>
-</body>
 </html>

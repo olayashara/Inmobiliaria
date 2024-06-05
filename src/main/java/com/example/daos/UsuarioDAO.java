@@ -18,8 +18,9 @@ public class UsuarioDAO {
     private static final String seleccionar_todos = "select * from usuario";
     private static final String seleccionar_por_identificacion = "select * FROM usuario WHERE identificacion=? AND contrasena = ? ";
     private static final String eliminar_usuario = "DELETE FROM usuarios WHERE cedula = ?";
-private static final String insertar_oferta = "insert into ofertas (usuario, oferta) values (?,?)";
-
+    private static final String insertar_oferta = "insert into ofertas (usuario, oferta) values (?,?)";
+    private static final String insertar_pago = "insert into pagos (nombre, apellido, contrasena, referencia, identificacion) values (?,?,?,?,?)";
+    
     protected Connection conectarBase() {
         Connection conexion = null;
         try {
@@ -70,13 +71,27 @@ private static final String insertar_oferta = "insert into ofertas (usuario, ofe
 
     }
 
+    public void insertarPago(Usuario usuario, double pago) {
+        try (Connection conexion = conectarBase(); PreparedStatement PS = conexion.prepareStatement(insertar_pago)) {
+            PS.setInt(1, usuario.getConsecutivo());
+            PS.setDouble(2, pago);
+            PS.executeUpdate();
+        } catch (SQLException e)
+
+        {
+            System.out.println("Si este método falla, no se pudo insertar el pago" + e.getMessage());
+            // TODO: handle exception
+        }
+
+    }
     public Usuario seleccionarUsuario(int identificacion, String contrasena) {
         Usuario usuario = new Usuario();
-        try (Connection conexion = conectarBase(); PreparedStatement PS = conexion.prepareStatement(seleccionar_por_identificacion)) {
+        try (Connection conexion = conectarBase();
+                PreparedStatement PS = conexion.prepareStatement(seleccionar_por_identificacion)) {
             PS.setInt(1, identificacion);
             PS.setString(2, contrasena);
             ResultSet RS = PS.executeQuery();
-            if (RS.next()){
+            if (RS.next()) {
                 usuario.setNombre(RS.getString("nombre"));
                 usuario.setApellido(RS.getString("apellido"));
                 usuario.setIdentificacion(RS.getInt("identificacion"));
@@ -90,7 +105,7 @@ private static final String insertar_oferta = "insert into ofertas (usuario, ofe
         }
         return usuario;
     }
-  
+
     public List<Usuario> seleccionarTodosUsuarios() {
         List<Usuario> usuarios = new ArrayList<>();
         try (Connection conexion = conectarBase();
@@ -108,13 +123,14 @@ private static final String insertar_oferta = "insert into ofertas (usuario, ofe
         }
         return usuarios;
     }
+
     public void eliminarUsuarioPorCedula(int cedula) {
         try (Connection conexion = conectarBase();
-            PreparedStatement PS = conexion.prepareStatement(eliminar_usuario)) {
-          PS.setInt(1, cedula);
-          PS.executeUpdate();
+                PreparedStatement PS = conexion.prepareStatement(eliminar_usuario)) {
+            PS.setInt(1, cedula);
+            PS.executeUpdate();
         } catch (SQLException e) {
-          System.out.println("Error al eliminar un usuario por cédula: " + e.getMessage());
+            System.out.println("Error al eliminar un usuario por cédula: " + e.getMessage());
         }
-      }
+    }
 }
